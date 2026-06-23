@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Threat Intelligence</title>
+        <link rel="stylesheet"
+            href="{{url_for('static',filename='css/style.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <h1>Threat Intelligence Dashboard</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Total Attacks</h3>
+                <span id="total">0</span>
+            </div>
+            <div class="card">
+                <h3>Unique IPs</h3>
+                <span id="ips">0</span>
+            </div>
+            <div class="card">
+                <h3>High Risk Sessions</h3>
+                <span id="high">0</span>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>AEI Risk Distribution</h2>
+            <canvas id="riskChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Attacks Per Hour</h2>
+            <canvas id="hourlyChart"></canvas>
+        </div>
+        <h2 style="margin-top:40px;">Live Attack Feed</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Source IP</th>
+                    <th>Service</th>
+                    <th>Event Type</th>
+                    <th>AEI Score</th>
+                </tr>
+            </thead>
+            <tbody id="attackTable">-->
+            </tbody>
+        </table>
+        <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
+    </body>
+</html>
