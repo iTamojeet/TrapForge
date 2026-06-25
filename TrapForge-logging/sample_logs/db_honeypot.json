@@ -1,0 +1,6 @@
+{"timestamp": "2026-06-24T03:40:02.115Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "connection_attempt", "client_version": "mysql-connector-java-8.0.30"}
+{"timestamp": "2026-06-24T03:40:03.442Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "auth_attempt", "username": "root", "password": "toor", "success": true}
+{"timestamp": "2026-06-24T03:40:05.671Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "query", "query": "SHOW DATABASES;"}
+{"timestamp": "2026-06-24T03:40:07.998Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "query", "query": "SELECT * FROM users WHERE 1=1;"}
+{"timestamp": "2026-06-24T03:40:10.213Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "query", "query": "SELECT load_file('/etc/passwd');"}
+{"timestamp": "2026-06-24T03:40:15.556Z", "session_id": "db-9f8e7d6c", "src_ip": "203.0.113.91", "event": "disconnect"}

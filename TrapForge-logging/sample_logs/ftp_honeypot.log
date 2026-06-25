@@ -1,0 +1,9 @@
+2026-06-24 03:20:11,502 INFO [ftp_honeypot] CONNECT src=198.51.100.17 port=21
+2026-06-24 03:20:13,114 INFO [ftp_honeypot] LOGIN src=198.51.100.17 session=f7e8d9c0 user=anonymous pass=guest@ status=SUCCESS
+2026-06-24 03:20:15,887 INFO [ftp_honeypot] COMMAND src=198.51.100.17 session=f7e8d9c0 cmd=LIST args=/
+2026-06-24 03:20:18,233 INFO [ftp_honeypot] COMMAND src=198.51.100.17 session=f7e8d9c0 cmd=CWD args=/backup
+2026-06-24 03:20:21,549 INFO [ftp_honeypot] COMMAND src=198.51.100.17 session=f7e8d9c0 cmd=RETR args=database_dump.sql
+2026-06-24 03:20:25,902 INFO [ftp_honeypot] FILE_TRANSFER src=198.51.100.17 session=f7e8d9c0 direction=download filename=database_dump.sql size=4582
+2026-06-24 03:20:30,118 INFO [ftp_honeypot] COMMAND src=198.51.100.17 session=f7e8d9c0 cmd=STOR args=backdoor.php
+2026-06-24 03:20:31,664 INFO [ftp_honeypot] FILE_TRANSFER src=198.51.100.17 session=f7e8d9c0 direction=upload filename=backdoor.php size=1024
+2026-06-24 03:20:40,001 INFO [ftp_honeypot] DISCONNECT src=198.51.100.17 session=f7e8d9c0

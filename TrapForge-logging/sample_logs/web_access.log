@@ -1,0 +1,6 @@
+192.0.2.88 - - [24/Jun/2026:03:30:05 +0000] "GET /wp-login.php HTTP/1.1" 200 1843 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
+192.0.2.88 - - [24/Jun/2026:03:30:07 +0000] "POST /wp-login.php HTTP/1.1" 401 412 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
+192.0.2.88 - - [24/Jun/2026:03:30:09 +0000] "GET /admin/config.php?id=1' OR '1'='1 HTTP/1.1" 200 2044 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
+192.0.2.88 - - [24/Jun/2026:03:30:12 +0000] "GET /../../etc/passwd HTTP/1.1" 403 287 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
+192.0.2.88 - - [24/Jun/2026:03:30:15 +0000] "POST /upload.php HTTP/1.1" 200 156 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
+192.0.2.88 - - [24/Jun/2026:03:30:20 +0000] "GET /shell.php?cmd=whoami HTTP/1.1" 200 312 "-" "Mozilla/5.0 (compatible; scanner/1.0)"
