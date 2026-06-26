@@ -19,11 +19,11 @@ from schema import UnifiedLogEvent
 
 
 DB_CONFIG = {
-    "host": os.environ.get("TRAPFORGE_DB_HOST", "localhost"),
-    "port": int(os.environ.get("TRAPFORGE_DB_PORT", 3306)),
-    "user": os.environ.get("TRAPFORGE_DB_USER", "trapforge_user"),
-    "password": os.environ.get("TRAPFORGE_DB_PASSWORD", "trapforge_pass"),
-    "database": os.environ.get("TRAPFORGE_DB_NAME", "trapforge_logs"),
+    "host": "localhost",
+    "port": 3306,
+    "user": "deceptiq",
+    "password": "TrapForge@123",
+    "database": "honeypot"
 }
 
 INSERT_SQL = """

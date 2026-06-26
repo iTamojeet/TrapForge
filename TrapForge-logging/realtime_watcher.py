@@ -47,10 +47,9 @@ from db_writer import insert_event
 # Maps a watched file path -> the parser module responsible for it.
 # Update these paths once real honeypot log locations are known.
 WATCHED_FILES = {
-    "/home/ubuntu/cowrie/var/log/cowrie/cowrie.json": ssh_parser,
-    "/var/log/opencanary.log": ftp_parser,
-    "/var/log/nginx/access.log": web_parser,   # or wherever Flask logs
-    "sample_logs/db_honeypot.json": db_parser, # placeholder, no DB honeypot
+    "/home/ubuntu/cowrie-logs/cowrie/cowrie.json": ssh_parser,
+    "sample_logs/ftp_honeypot.log": ftp_parser,
+    "sample_logs/web_access.log": web_parser,
 }
 
 
