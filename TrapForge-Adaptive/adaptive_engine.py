@@ -6,10 +6,10 @@ from adaptation_rules import RULES
 
 DB_CONFIG = {
     "host": "localhost",
-    "port": 3307,
-    "user": "aei_user",
-    "password": "aei_pass",
-    "database": "trapforge_logs"
+    "port": 3306,
+    "user": "deceptiq",
+    "password": "TrapForge@123",
+    "database": "honeypot"
 }
 
 
