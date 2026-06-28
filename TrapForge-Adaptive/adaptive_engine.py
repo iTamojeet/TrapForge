@@ -5,7 +5,7 @@ import time
 from adaptation_rules import RULES
 
 DB_CONFIG = {
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 3306,
     "user": "deceptiq",
     "password": "TrapForge@123",

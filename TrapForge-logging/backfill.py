@@ -16,7 +16,7 @@ from db_writer import insert_events_batch, get_total_row_count
 
 
 SOURCES = [
-    ("sample_logs/ssh_cowrie.json", ssh_parser),
+    ("/home/ubuntu/cowrie-logs/cowrie/cowrie.json", ssh_parser),
     ("sample_logs/ftp_honeypot.log", ftp_parser),
     ("sample_logs/web_access.log", web_parser),
     ("sample_logs/db_honeypot.json", db_parser),

@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Threat Intelligence</title>
-        <link rel="stylesheet"
-            href="{{url_for('static',filename='css/style.css')}}">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-    <body>
-        <h1>Threat Intelligence Dashboard</h1>
-        <div class="cards">
-            <div class="card">
-                <h3>Total Attacks</h3>
-                <span id="total">0</span>
-            </div>
-            <div class="card">
-                <h3>Unique IPs</h3>
-                <span id="ips">0</span>
-            </div>
-            <div class="card">
-                <h3>High Risk Sessions</h3>
-                <span id="high">0</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrapForge — Threat Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">⬡</span>
+                <div>
+                    <span class="logo-title">TRAPFORGE</span>
+                    <span class="logo-sub">Adaptive Deception Framework</span>
+                </div>
             </div>
         </div>
-        <div class="chart-container">
-            <h2>AEI Risk Distribution</h2>
-            <canvas id="riskChart"></canvas>
+        <div class="header-center">
+            <div class="status-bar">
+                <span class="status-dot"></span>
+                <span>LIVE — All Honeypots Active</span>
+            </div>
         </div>
-        <div class="chart-container">
-            <h2>Attacks Per Hour</h2>
-            <canvas id="hourlyChart"></canvas>
+        <div class="header-right">
+            <div class="clock" id="clock">--:--:--</div>
+            <div class="date" id="date">--</div>
         </div>
-        <h2 style="margin-top:40px;">Live Attack Feed</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Timestamp</th>
-                    <th>Source IP</th>
-                    <th>Service</th>
-                    <th>Event Type</th>
-                    <th>AEI Score</th>
-                </tr>
-            </thead>
-            <tbody id="attackTable">-->
-            </tbody>
-        </table>
-        <script src="{{url_for('static',filename='js/dashboard.js')}}"></script>
-    </body>
+    </header>
+    <section class="stats-grid">
+        <div class="stat-card"><div class="stat-icon">⚡</div><div class="stat-body"><div class="stat-value" id="total">—</div><div class="stat-label">Total Events</div></div><div class="stat-bar" style="background:linear-gradient(90deg,#38bdf8,#0ea5e9)"></div></div>
+        <div class="stat-card"><div class="stat-icon">🌐</div><div class="stat-body"><div class="stat-value" id="ips">—</div><div class="stat-label">Unique Attackers</div></div><div class="stat-bar" style="background:linear-gradient(90deg,#a78bfa,#7c3aed)"></div></div>
+        <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-body"><div class="stat-value" id="sessions">—</div><div class="stat-label">Attack Sessions</div></div><div class="stat-bar" style="background:linear-gradient(90deg,#34d399,#059669)"></div></div>
+        <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-body"><div class="stat-value" id="avg_aei">—</div><div class="stat-label">Avg AEI Score</div></div><div class="stat-bar" style="background:linear-gradient(90deg,#fbbf24,#d97706)"></div></div>
+        <div class="stat-card danger"><div class="stat-icon">🔴</div><div class="stat-body"><div class="stat-value" id="high">—</div><div class="stat-label">High Risk Sessions</div></div><div class="stat-bar" style="background:linear-gradient(90deg,#f87171,#dc2626)"></div></div>
+    </section>
+    <section class="charts-row">
+        <div class="chart-card wide"><div class="chart-header"><h2>Attack Timeline <span class="badge">Hourly</span></h2></div><canvas id="hourlyChart"></canvas></div>
+        <div class="chart-card"><div class="chart-header"><h2>AEI Distribution</h2></div><canvas id="aeiChart"></canvas><div class="chart-legend" id="aeiLegend"></div></div>
+        <div class="chart-card"><div class="chart-header"><h2>Service Breakdown</h2></div><canvas id="serviceChart"></canvas></div>
+    </section>
+    <section class="table-section">
+        <div class="table-header"><h2>⚠️ Top Attackers by AEI Score</h2><span class="badge pulse">Live</span></div>
+        <div class="table-wrap"><table><thead><tr><th>#</th><th>IP Address</th><th>AEI Score</th><th>Risk Level</th><th>DRS Score</th><th>Services</th><th>Events</th><th>First Seen</th><th>Last Seen</th></tr></thead><tbody id="attackerTable"></tbody></table></div>
+    </section>
+    <section class="table-section">
+        <div class="table-header"><h2>📡 Live Attack Feed</h2><span class="badge pulse">Auto-refresh 5s</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Timestamp</th><th>Source IP</th><th>Service</th><th>Event Type</th><th>AEI Score</th><th>Risk</th></tr></thead><tbody id="attackTable"></tbody></table></div>
+    </section>
+    <footer>TrapForge — Adaptive Multi-Service Deception Framework &nbsp;|&nbsp; AEI Engine v1.0 &nbsp;|&nbsp; IEM Kolkata &nbsp;|&nbsp; <span id="lastUpdate">—</span></footer>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
 </html>

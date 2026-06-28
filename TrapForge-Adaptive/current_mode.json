@@ -1,3 +1,13 @@
 {
-    "mode": "BORING"
+    "mode": "ENGAGING",
+    "fake_files": [
+        "employees.csv",
+        "projects.docx"
+    ],
+    "fake_services": [
+        "SSH",
+        "FTP"
+    ],
+    "allow_fake_login": false,
+    "description": "Additional fake files and services are exposed to increase attacker engagement."
 }
